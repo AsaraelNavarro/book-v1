@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "_reset.scss";
+
+//colors
+$main-color: #8e2ad6;
+$main-bg: #f1f1f1;
+
+body {
+	margin: 0 30px;
+	font-family: "Poppins";
+	background: $main-bg;
+}
+h1,
+h2,
+h3,
+h4 {
+	font-weight: 500;
+}
+.App {
+	font-size: 1.2em;
+	margin: 10px auto;
+	width: 100%;
+	max-width: 1200px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+//Global
+.content {
+	padding: 60px 0;
+
+	.container {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 30px;
+	}
+}
+
+//Header
+.site-header {
+	font-size: 1.5em;
+	color: $main-color;
+}
+.main-navigation {
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 2px solid $main-color;
+
+	ul {
+		width: 30%;
+		display: flex;
+		justify-content: space-between;
+
+		.navl-ink {
+			outline: dotted;
+			&:hover {
+				border-bottom: 1px dotted $main-color;
+			}
+		}
+	}
+}
+
+//Home
+.job-card {
+	width: 100%;
+	padding: 40px 10px;
+	border-bottom: 1px solid #ccc;
+}

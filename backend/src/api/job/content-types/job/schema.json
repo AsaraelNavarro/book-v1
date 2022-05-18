@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "jobs",
+  "info": {
+    "singularName": "job",
+    "pluralName": "jobs",
+    "displayName": "Job",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "puesto": {
+      "type": "string"
+    },
+    "empresa": {
+      "type": "string",
+      "required": true
+    },
+    "actividades": {
+      "type": "richtext",
+      "required": false
+    },
+    "fecha_entrada": {
+      "type": "date",
+      "required": true
+    },
+    "fecha_salida": {
+      "type": "date",
+      "required": false
+    }
+  }
+}
