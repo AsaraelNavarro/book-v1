@@ -135,6 +135,8 @@ small {
 
 	gap: 20px;
 	height: 100%;
+	position: relative;
+	align-items: start;
 
 	.profile {
 		grid-row-start: 1;
@@ -142,6 +144,9 @@ small {
 
 		grid-row-end: 4;
 		grid-column-end: 3;
+		align-self: start;
+		position: sticky;
+		top: 10px;
 
 		&__container {
 			background-color: $light-gray-color;
@@ -176,11 +181,12 @@ small {
 	margin-bottom: 30px;
 
 	&__image {
-		max-width: 100%;
+		width: 100%;
 		height: auto;
 		object-fit: cover;
 		border-radius: 50%;
-		padding-bottom: 30px;
+		margin-bottom: 30px;
+		border: 5px solid rgba($light-green-color, 0.5);
 	}
 
 	&__name {
@@ -197,6 +203,16 @@ small {
 	&__link {
 		color: $main-color;
 		padding: 5px;
+		transition: all 0.5s;
+
+		&:hover {
+			color: $light-green-color;
+			transform: translateX(5px);
+		}
+
+		svg {
+			margin-right: 10px;
+		}
 	}
 }
 .card {

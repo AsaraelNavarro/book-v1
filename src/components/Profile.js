@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 import { Link } from 'react-router-dom';
 import avatar from '../images/perfil.jpg';
@@ -12,9 +14,15 @@ export function Profile() {
                 <small className="avatar__info">El / He / Him - 38 años</small>
             </article>
             <article className="contact">
-                <Link className="contact__link mail" to={'mailto:asarael.navarro@gmail.com'}>asarael.navarro@gmail.com</Link>
-                <Link className="contact__link behance" to={'https://www.behance.net/asarael_navarro'}>/asarael_navarro</Link>
-                <Link className="contact__link github" to={'https://github.com/AsaraelNavarro/'}>@AsaraelNavarro</Link>
+                <Link className="contact__link mail" to={'mailto:asarael.navarro@gmail.com'}>
+                    <FontAwesomeIcon icon={solid('envelope')} />  asarael.navarro@gmail.com
+                </Link>
+                <Link className="contact__link behance" to={'https://www.behance.net/asarael_navarro'}>
+                    <FontAwesomeIcon icon={brands('behance')} />  /asarael_navarro
+                </Link>
+                <Link className="contact__link github" to={'https://github.com/AsaraelNavarro/'}>
+                    <FontAwesomeIcon icon={brands('github')} />  @AsaraelNavarro
+                </Link>
             </article>
         </section>
     )

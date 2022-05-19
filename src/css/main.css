@@ -601,6 +601,10 @@ small {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 20px;
   height: 100%;
+  position: relative;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 
 .home .profile {
@@ -610,6 +614,12 @@ small {
       grid-column-start: 1;
   grid-row-end: 4;
   grid-column-end: 3;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
 }
 
 .home .profile__container {
@@ -653,12 +663,13 @@ small {
 }
 
 .avatar__image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border: 5px solid rgba(119, 180, 158, 0.5);
 }
 
 .avatar__name {
@@ -678,6 +689,18 @@ small {
 .contact__link {
   color: #083949;
   padding: 5px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.contact__link:hover {
+  color: #77b49e;
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.contact__link svg {
+  margin-right: 10px;
 }
 
 .card {
