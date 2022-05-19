@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { solid, regular, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
+import { solid, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 import { Link } from 'react-router-dom';
 import avatar from '../images/perfil.jpg';
