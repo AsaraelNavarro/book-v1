@@ -9,7 +9,12 @@ const useFetch = (url) => {
         const fetchData = async () => {
             setLoading(true)
             try {
-                const res = await fetch(url)
+                const res = await fetch(url, {
+                    'mode': 'cors',
+                    'headers': {
+                        'Access-Control-Allow-Origin': '*',
+                    }
+                })
                 const json = await res.json()
 
                 setData(json)
