@@ -10,7 +10,7 @@ const useFetch = (url) => {
             setLoading(true)
             try {
                 const res = await fetch(url, {
-                    'mode': 'cors',
+                    'mode': 'no-cors',
                     'headers': {
                         'Access-Control-Allow-Origin': '*',
                     }
