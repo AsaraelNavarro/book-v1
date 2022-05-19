@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom"
 import useFetch from '../hooks/useFetch'
 
 export function JobDetails() {
-    const apiUrl = 'http://localhost:1337/api/jobs/'
+    /* const apiUrl = 'http://localhost:1337/api/jobs/' */
+    const apiUrl = 'https://strapi-mycv.herokuapp.com/api/jobs/'
     const { id } = useParams();
     const { loading, error, data } = useFetch(apiUrl + id);
 
