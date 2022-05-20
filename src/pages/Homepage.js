@@ -78,7 +78,7 @@ export function Homepage() {
                             fecha_salida="Abr 2017"
                             actividades="Administración de redes sociales (Facebook y twiter): Curación y publicación de contenidos. Interacción con usuarios: Respuesta a preguntas y comentarios, control de daños. Diseño gráfico: diseño de materiales para publicaciones y layouts para contenido en redes, logos, flyers, invitaciones y diseño de paginas web. Web: Diseño y programación html, css, javascript."
                         />
-                        <JobCard
+                        {/* <JobCard
                             puesto="Diseñador gráfico"
                             empresa="AVE Publicidad"
                             fecha_entrada="Oct 2013"
@@ -98,7 +98,7 @@ export function Homepage() {
                             fecha_entrada="Sep 2011"
                             fecha_salida="Ene 2012"
                             actividades="Diseño de lonas, volantes y flyers y tarjetas de presentación. Diseño de logotipos."
-                        />
+                        /> */}
                     </section>
                     <section className="job-list__container flex flex-wrap">
                         <Title title='Educación' />
