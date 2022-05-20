@@ -283,6 +283,9 @@ small {
 }
 
 @media (max-width: 767px) {
+	.main {
+		margin: 20px 0;
+	}
 	//Home
 	.home {
 		margin: 0 20px;
@@ -299,7 +302,7 @@ small {
 				&:nth-child(1) {
 					grid-column: 1/4;
 					grid-row: 1/2;
-					padding: 60px;
+					padding: 60px 40px;
 				}
 
 				&:nth-child(2) {
