@@ -796,7 +796,7 @@ small {
 
 @media (max-width: 767px) {
   .main {
-    margin: 20px 0;
+    padding: 20px 0;
   }
   .home {
     margin: 0 20px;
@@ -852,6 +852,9 @@ small {
   .card {
     width: 100%;
     padding: 30px 0;
+  }
+  .card:hover {
+    padding: 30px 20px;
   }
 }
 /*# sourceMappingURL=main.css.map */

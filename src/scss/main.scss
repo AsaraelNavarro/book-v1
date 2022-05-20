@@ -284,7 +284,7 @@ small {
 
 @media (max-width: 767px) {
 	.main {
-		margin: 20px 0;
+		padding: 20px 0;
 	}
 	//Home
 	.home {
@@ -324,5 +324,8 @@ small {
 	.card {
 		width: 100%;
 		padding: 30px 0;
+		&:hover {
+			padding: 30px 20px;
+		}
 	}
 }
