@@ -4,8 +4,8 @@ import useFetch from "../hooks/useFetch"
 import Title from "../components/Title"
 
 export default function JobList() {
-    /* const apiUrl = 'http://localhost:1337/api/jobs/' */
-    const apiUrl = 'https://strapi-myresume.herokuapp.com/api/jobs/'
+    /* const apiUrl = 'http://localhost:1337/api/jobs/'
+    const apiUrl = 'https://strapi-mycv.herokuapp.com//api/jobs/' */
     const { loading, error, data } = useFetch(apiUrl)
 
     if (loading) return <p>Loading...</p>
@@ -21,7 +21,7 @@ export default function JobList() {
                         <small className="card__header__date">{jobs.attributes.fecha_salida}</small>
                     </div>
                     <p className="card__content">{jobs.attributes.actividades}</p>
-                    {/* <Link to={`/detalles/${jobs.id}`}>Ver Más</Link> */}
+                    <Link to={`/detalles/${jobs.id}`}>Ver Más</Link>
                 </article>
             ))}
         </section>
