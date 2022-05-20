@@ -31,7 +31,7 @@ export function Homepage() {
                             <Badge badgeTitle="SASS" />
                             <Badge badgeTitle="Javascript" />
                             <Badge badgeTitle="Git" />
-                            <Badge badgeTitle="React Js" />
+                            <Badge badgeTitle="React Js básico" />
                             <Badge badgeTitle="Maquetación web" />
                             <Badge badgeTitle="Fotocomposición" />
                             <Badge badgeTitle="SEO" />
@@ -108,6 +108,14 @@ export function Homepage() {
                             dateFinished="2013"
                             cardContent="Escuela de Artes Plásticas - Licenciatura en diseño gráfico."
                         />
+                    </section>
+                    <section className="job-list__container flex flex-wrap">
+                        <Title title='Actualmente aprendiendo' />
+                        <div>
+                            <Badge badgeTitle="React Js" />
+                            <Badge badgeTitle="Node Js" />
+                            <Badge badgeTitle="Tailwind" />
+                        </div>
                     </section>
                     <section className="job-list__container flex flex-wrap">
                         <Title title='Idiomas' />

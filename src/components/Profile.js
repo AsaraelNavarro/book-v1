@@ -14,14 +14,14 @@ export function Profile() {
                 <small className="avatar__info">El / He / Him - 38 años</small>
             </article>
             <article className="contact">
-                <a className="contact__link mail" href="mailto:asarael.navarro@gmail.com" target="_blank" rel="noreferrer">
-                    asarael.navarro@gmail.com
+                <a className="contact__link mail" href="mailto:asarael.navarro@gmail.com" target="_blank" rel="noopener noreferrer" >
+                    <FontAwesomeIcon icon={solid('envelope')} /> asarael.navarro@gmail.com
                 </a>
-                <a className="contact__link behance" href="https://www.behance.net/asarael_navarro" target="_blank" rel="noreferrer">
-                    /asarael_navarro
+                <a className="contact__link behance" href="https://www.behance.net/asarael_navarro" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={brands('behance')} /> /asarael_navarro
                 </a>
-                <a className="contact__link github" href="https://github.com/AsaraelNavarro/" target="_blank" rel="noreferrer">
-                    @AsaraelNavarro
+                <a className="contact__link github" href="https://github.com/AsaraelNavarro/" target="_blank" rel="noopener noreferrer">
+                    <FontAwesomeIcon icon={brands('github')} />  @AsaraelNavarro
                 </a>
             </article>
         </section>
