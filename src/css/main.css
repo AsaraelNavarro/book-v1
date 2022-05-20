@@ -704,8 +704,8 @@ small {
   width: 100%;
   padding: 30px 20px;
   margin-bottom: 10px;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all ease-out 0.2s;
+  transition: all ease-out 0.2s;
 }
 
 .card:hover {
@@ -854,7 +854,8 @@ small {
     padding: 30px 0;
   }
   .card:hover {
-    padding: 30px 20px;
+    padding: 30px 30px;
+    margin: 0 -30px 10px -30px;
   }
 }
 /*# sourceMappingURL=main.css.map */
