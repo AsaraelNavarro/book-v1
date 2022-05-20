@@ -5,7 +5,7 @@ import Title from "../components/Title"
 
 export default function JobList() {
     /* const apiUrl = 'http://localhost:1337/api/jobs/' */
-    const apiUrl = 'https://strapi-mycv.herokuapp.com/api/jobs/'
+    const apiUrl = 'https://strapi-myresume.herokuapp.com/api/jobs/'
     const { loading, error, data } = useFetch(apiUrl)
 
     if (loading) return <p>Loading...</p>
