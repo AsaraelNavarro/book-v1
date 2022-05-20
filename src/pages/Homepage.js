@@ -28,6 +28,7 @@ export function Homepage() {
                             <Badge badgeTitle="Adobe Creative Suite" />
                             <Badge badgeTitle="HTML" />
                             <Badge badgeTitle="CSS" />
+                            <Badge badgeTitle="SASS" />
                             <Badge badgeTitle="Javascript" />
                             <Badge badgeTitle="Git" />
                             <Badge badgeTitle="React Js" />
