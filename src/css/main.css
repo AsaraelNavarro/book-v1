@@ -846,5 +846,9 @@ small {
     -ms-grid-row-span: 1;
     grid-row: 2/3;
   }
+  .card {
+    width: 100%;
+    padding: 30px 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
