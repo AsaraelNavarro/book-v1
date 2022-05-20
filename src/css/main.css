@@ -795,6 +795,9 @@ small {
 }
 
 @media (max-width: 767px) {
+  .home {
+    margin: 0 20px;
+  }
   .home .profile {
     -ms-grid-column: 1;
     -ms-grid-column-span: 6;
@@ -817,7 +820,7 @@ small {
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1/2;
-    padding: 40px 20%;
+    padding: 80px 20%;
   }
   .home .profile__container:nth-child(2) {
     -ms-grid-column: 1;

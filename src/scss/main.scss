@@ -285,6 +285,7 @@ small {
 @media (max-width: 767px) {
 	//Home
 	.home {
+		margin: 0 20px;
 		.profile {
 			grid-column: 1/7;
 			grid-row: 1/2;
@@ -298,7 +299,7 @@ small {
 				&:nth-child(1) {
 					grid-column: 1/4;
 					grid-row: 1/2;
-					padding: 40px 20%;
+					padding: 80px 20%;
 				}
 
 				&:nth-child(2) {
