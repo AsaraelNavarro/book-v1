@@ -14,8 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         {/* <Route path="/detalles/:id" element={<JobDetails />} />
-        <Route path="/categoria/:id" element={<Category />} /> */}
-        <Route path="*" element={<h1>404</h1>} />
+        <Route path="/categoria/:id" element={<Category />} />
+        <Route path="*" element={<h1>404</h1>} /> */}
       </Routes>
     </div>
   );
