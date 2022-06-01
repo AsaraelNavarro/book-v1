@@ -5,7 +5,7 @@
 $main-color: #083949;
 $secondary-color: #215a5c;
 $accent-color: #3d7c71;
-$light-green-color: #77b49e;
+$light-green-color: #00bbba;
 $light-color: #f9f8ec;
 $gray-color: #f4f4f4;
 $light-gray-color: #f9f9f9;
@@ -16,7 +16,7 @@ body {
 	font-family: "Mulish";
 	background: $main-bg;
 	font-size: 17px;
-	color: $accent-color;
+	color: $main-color;
 }
 h1 {
 	font-size: 2rem;
@@ -82,7 +82,7 @@ small {
 	display: inline-block;
 	font-weight: 400;
 	line-height: 1.5;
-	color: $accent-color;
+	color: $main-color;
 	text-align: center;
 	text-decoration: none;
 	vertical-align: middle;
@@ -90,7 +90,7 @@ small {
 	-moz-user-select: none;
 	user-select: none;
 	background-color: transparent;
-	border: 1px solid $accent-color;
+	border: 1px solid $main-color;
 	padding: 0.375rem 0.75rem;
 	font-size: 1rem;
 	border-radius: 0.25rem;
@@ -100,8 +100,8 @@ small {
 //Header
 .site-header {
 	color: $main-color;
-	background-color: $light-color;
-	border-bottom: 1px solid $light-green-color;
+	background-color: $main-bg;
+	border-bottom: 1px solid rgba($main-color, 0.5);
 }
 .main-navigation {
 	padding: 20px;
@@ -216,7 +216,7 @@ small {
 
 	&:hover {
 		background: $light-color;
-		box-shadow: 0 5px 18px rgba($accent-color, 0.2);
+		box-shadow: 0 5px 18px rgba($main-color, 0.2);
 		transform: translateY(-5px);
 	}
 	&__header {
@@ -233,7 +233,7 @@ small {
 
 	&__content {
 		line-height: 1.5;
-		color: $accent-color;
+		color: $main-color;
 	}
 
 	&:last-child {

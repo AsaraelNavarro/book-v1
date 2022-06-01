@@ -1,4 +1,4 @@
-/* import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const useFetch = (url) => {
     const [data, setData] = useState(null);
@@ -9,12 +9,7 @@ const useFetch = (url) => {
         const fetchData = async () => {
             setLoading(true)
             try {
-                const res = await fetch(url, {
-                    'mode': 'no-cors',
-                    'headers': {
-                        'Access-Control-Allow-Origin': '*',
-                    }
-                })
+                const res = await fetch(url)
                 const json = await res.json()
 
                 setData(json)
@@ -31,4 +26,4 @@ const useFetch = (url) => {
     return { loading, error, data }
 }
 
-export default useFetch */
+export default useFetch

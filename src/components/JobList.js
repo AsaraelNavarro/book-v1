@@ -4,9 +4,12 @@ import useFetch from "../hooks/useFetch"
 import Title from "../components/Title"
 
 export default function JobList() {
-    /* const apiUrl = 'http://localhost:1337/api/jobs/'
-    const apiUrl = 'https://strapi-mycv.herokuapp.com//api/jobs/' */
+    const endPoint = 'jobs'
+    /* const apiUrl = 'http://localhost:1337/api/jobs/' */
+    const apiUrl = `http://localhost:1337/api/${endPoint}`;
     const { loading, error, data } = useFetch(apiUrl)
+
+    /* console.log(data); */
 
     if (loading) return <p>Loading...</p>
     if (error) return <p>Error</p>
@@ -16,12 +19,12 @@ export default function JobList() {
             {data.data.map((jobs) => (
                 <article key={jobs.id} className="card">
                     <div className="card__header">
-                        <h3 className="card__header__title">{jobs.attributes.puesto} en {jobs.attributes.empresa} </h3>
-                        <small className="card__header__date">{jobs.attributes.fecha_entrada} - </small>
-                        <small className="card__header__date">{jobs.attributes.fecha_salida}</small>
+                        <h3 className="card__header__title">{jobs.attributes.position} en {jobs.attributes.company} </h3>
+                        <small className="card__header__date">{jobs.attributes.start_date} - </small>
+                        <small className="card__header__date">{jobs.attributes.exit_date}</small>
                     </div>
-                    <p className="card__content">{jobs.attributes.actividades}</p>
-                    <Link to={`/detalles/${jobs.id}`}>Ver Más</Link>
+                    <p className="card__content">{jobs.attributes.activities}</p>
+                    {/* <Link to={`/detalles/${jobs.id}`}>Ver Más</Link> */}
                 </article>
             ))}
         </section>
