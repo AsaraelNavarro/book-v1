@@ -1,12 +1,11 @@
 import React from 'react';
-/* import { Link } from "react-router-dom"; */
-import { Profile } from "../components/Profile"
-import JobList from "../components/JobList"
 
-import Title from "../components/Title"
-import SectionCard from "../components/SectionCard"
-import Badge from "../components/Badge"
-export function Homepage() {
+import Profile from "../components/cv/Profile"
+import JobList from "../components/cv/JobList"
+import Title from "../components/cv/Title"
+import SectionCard from "../components/cv/SectionCard"
+import Badge from "../components/cv/Badge"
+export default function Cv() {
 
     return (
         <main className="main">

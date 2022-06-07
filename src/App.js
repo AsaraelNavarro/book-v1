@@ -1,23 +1,27 @@
 import React from 'react';
+import { ThemeProvider } from 'styled-components';
 import { Routes, Route } from "react-router-dom";
 
 //Page and layout imports
-import { Homepage } from './pages/Homepage';
-/* import { JobDetails } from './pages/JobDetails';
-import { Category } from './pages/Category'; */
-import { SiteHeader } from './components/SiteHeader';
+import Home from './pages/Home';
+import Cv from './pages/Cv';
+import SiteHeader from './components/SiteHeader';
+import theme from './styles/Theme';
+import GlobalStyles from './styles/GlobalStyle';
 
 function App() {
   return (
-    <div className="App">
-      <SiteHeader />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        {/* <Route path="/detalles/:id" element={<JobDetails />} />
-        <Route path="/categoria/:id" element={<Category />} />
-        <Route path="*" element={<h1>404</h1>} /> */}
-      </Routes>
-    </div>
+    <ThemeProvider theme={theme}>
+      <>
+        <GlobalStyles />
+        <SiteHeader />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route index element={<Home />} />
+          <Route path="/cv" element={<Cv />} />
+        </Routes>
+      </>
+    </ThemeProvider>
   );
 }
 

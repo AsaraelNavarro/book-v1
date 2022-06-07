@@ -1,12 +1,12 @@
 import React from 'react';
 
-import useFetch from "../hooks/useFetch"
-import Title from "../components/Title"
+import useFetch from "../../hooks/useFetch"
+import Title from "../../components/cv/Title"
 
 export default function JobList() {
-    const endPoint = 'jobs'
+    const contentType = 'jobs'
     /* const apiUrl = 'http://localhost:1337/api/jobs/' */
-    const apiUrl = `http://localhost:1337/api/${endPoint}`;
+    const apiUrl = `http://localhost:1337/api/${contentType}`;
     const { loading, error, data } = useFetch(apiUrl)
 
     /* console.log(data); */
@@ -24,7 +24,6 @@ export default function JobList() {
                         <small className="card__header__date">{jobs.attributes.exit_date}</small>
                     </div>
                     <p className="card__content">{jobs.attributes.activities}</p>
-                    {/* <Link to={`/detalles/${jobs.id}`}>Ver Más</Link> */}
                 </article>
             ))}
         </section>

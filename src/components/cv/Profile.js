@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { solid, brands } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 /* import { Link } from 'react-router-dom'; */
-import avatar from '../images/perfil.jpg';
+import avatar from '../../images/perfil.jpg';
 
-export function Profile() {
+export default function Profile() {
     return (
         <section className="profile__container flex flex-wrap">
             <article className="avatar">
