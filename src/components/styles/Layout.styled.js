@@ -7,7 +7,6 @@ const StyledMain = styled.main`
 const ContainerFluid = styled.section`
     width:100%;
     background-color: ${({ theme }) => theme.colors.main};
-    padding: 60px 0;
 
     p{
         color: ${({ theme }) => theme.colors.white};
@@ -19,7 +18,7 @@ const Container = styled.div`
         margin: 0 auto;
         display: grid;
         grid-gap: 20px;
-        padding: 30px;
+        padding:80px 20px;
     `
 const StyledHero = styled.section`
     width:100%;
@@ -56,6 +55,64 @@ const ColumnHero = styled.div`
         }
     }
 `
+const Flex = styled.div` 
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
 
+    article{
+        display: grid;
+            grid-gap: 20px;
+            margin-bottom:40px;
 
-export { Container, ContainerFluid, StyledMain, ColumnHero, StyledHero }
+        figure{
+            padding:20px;
+            border-radius: 20px;
+            margin-top: 80px;
+            background-color: ${({ theme }) => theme.colors.accent};
+            width: 100%;
+
+            img{
+                border-radius: 10px;
+                margin-top: -80px;
+                box-shadow: 0 0 30px rgba(8,57,73, .3);
+                width: 100%;
+            }
+        }
+
+        div{
+            padding: 0 20px;
+            li{
+                display: inline-block;
+                padding: 5px;
+                margin-bottom: 40px;
+            }
+        }
+
+        &:first-child{
+            grid-column: span 3;
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+            grid-gap: 20px;
+
+            align-items: center;
+        }
+
+    }
+    @media (max-width: 920px){
+        grid-template-columns: 1fr 1fr;
+        
+        article{
+            &:first-child{
+            grid-column: span 1;
+            grid-template-columns: 1fr;
+        }
+        }
+    }
+    @media (max-width: 768px){
+        grid-template-columns: 1fr;
+        
+    }
+`
+
+export { Container, ContainerFluid, StyledMain, ColumnHero, StyledHero, Flex }

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { StyledHeader, StyledNav } from './styles/Header.styled';
 
 
-function SiteHeader() {
+export default function SiteHeader() {
     return (
         <StyledHeader>
             <StyledNav>
@@ -23,4 +23,3 @@ function SiteHeader() {
 }
 
 
-export default SiteHeader
