@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 export const headers = {
+    "Accept": "application/vnd.github.v3+json",
     "Authorization": `Token ${process.env.REACT_APP_GH_TOKEN}`
 }
 
@@ -13,15 +14,10 @@ const useFetch = (url) => {
         const fetchData = async () => {
             setLoading(true)
             try {
-                const reposShow = 3, sort = "updated"
-
-
                 const res = await fetch(url,
                     {
                         "method": "GET",
                         "headers": headers,
-                        "per_page": reposShow,
-                        "sort": sort
                     })
                 const json = await res.json()
 

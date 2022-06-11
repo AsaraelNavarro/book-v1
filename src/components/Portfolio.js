@@ -7,10 +7,14 @@ import { solid, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 export default function Portfolio() {
 
-    const apiUrl = `https://api.github.com/user/repos?q=sort:pushed`;
+    const apiUrl = `https://api.github.com/user/repos?q=per_page:3`;
     /* const apiUrl = "https://api.github.com/users/asaraelnavarro/repos"; */
 
     const { loading, error, data } = fetchGit(apiUrl)
+
+    function byDate(a, b) {
+        return new Date(b.pushed_at).valueOf() - new Date(a.pushed_at).valueOf()
+    }
     console.log(data);
 
     if (loading) return <p>Loading...</p>
@@ -19,7 +23,7 @@ export default function Portfolio() {
         <Container>
             <Title light>Proyectos recientes</Title>
             <Grid>
-                {data.map((repos) => (
+                {data.sort(byDate).slice(0, 4).map((repos) => (
                     <article key={repos.id}>
                         <Figure>
                             <img src={repos.content_url} alt="Avatar Asarael Navarro Beltrán" />
