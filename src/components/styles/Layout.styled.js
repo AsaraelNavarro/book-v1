@@ -55,7 +55,7 @@ const ColumnHero = styled.div`
         }
     }
 `
-const Flex = styled.div` 
+const Grid = styled.div` 
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
@@ -65,27 +65,16 @@ const Flex = styled.div`
             grid-gap: 20px;
             margin-bottom:40px;
 
-        figure{
-            padding:20px;
-            border-radius: 20px;
-            margin-top: 80px;
-            background-color: ${({ theme }) => theme.colors.accent};
-            width: 100%;
-
-            img{
-                border-radius: 10px;
-                margin-top: -80px;
-                box-shadow: 0 0 30px rgba(8,57,73, .3);
-                width: 100%;
-            }
-        }
-
         div{
             padding: 0 20px;
-            li{
-                display: inline-block;
-                padding: 5px;
-                margin-bottom: 40px;
+            ul{
+                margin-bottom:40px;
+                
+                li{
+                    display: inline-block;
+                    padding: 5px;
+                    margin: 0 10px 10px 0;
+                }
             }
         }
 
@@ -115,4 +104,4 @@ const Flex = styled.div`
     }
 `
 
-export { Container, ContainerFluid, StyledMain, ColumnHero, StyledHero, Flex }
+export { Container, ContainerFluid, StyledMain, ColumnHero, StyledHero, Grid }
