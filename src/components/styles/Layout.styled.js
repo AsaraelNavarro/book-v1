@@ -11,7 +11,7 @@ const ContainerFluid = styled.section`
     p{
         color: ${({ theme }) => theme.colors.white};
     }
-    `
+`
 const Container = styled.div`
         width:100%;
         max-width:1200px;
@@ -60,48 +60,49 @@ const Grid = styled.div`
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
 
-    article{
-        display: grid;
-            grid-gap: 20px;
-            margin-bottom:40px;
-
-        div{
-            padding: 0 20px;
-            ul{
-                margin-bottom:40px;
-                
-                li{
-                    display: inline-block;
-                    padding: 5px;
-                    margin: 0 10px 10px 0;
-                }
-            }
-        }
-
-        &:first-child{
-            grid-column: span 3;
-            display: grid;
-            grid-template-columns: 2fr 3fr;
-            grid-gap: 20px;
-
-            align-items: center;
-        }
-
-    }
     @media (max-width: 920px){
         grid-template-columns: 1fr 1fr;
-        
-        article{
-            &:first-child{
-            grid-column: span 1;
-            grid-template-columns: 1fr;
-        }
-        }
     }
+
     @media (max-width: 768px){
         grid-template-columns: 1fr;
-        
     }
 `
 
-export { Container, ContainerFluid, StyledMain, ColumnHero, StyledHero, Grid }
+const Article = styled.article`
+    display: grid;
+    grid-gap: 20px;
+    margin-bottom: 40px;
+    align-content: baseline;
+    position: relative;
+
+    div{
+        padding: 0 20px;
+            ul{
+                margin-bottom: 40px;
+                
+            li{
+                display: inline-block;
+                padding: 5px;
+                margin: 0 10px 10px 0;
+            }
+        }
+    }
+
+    &:first-child{
+        grid-column: span 3;
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        grid-gap: 20px;
+        align-items: center;
+    }
+
+    @media(max-width: 920px) {        
+        &:first-child{
+            grid-column: span 1;
+            grid-template-columns: 1fr;
+        }
+    }
+`
+
+export { Container, ContainerFluid, StyledMain, ColumnHero, StyledHero, Grid, Article }
