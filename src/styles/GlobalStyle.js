@@ -7,8 +7,13 @@ const GlobalStyles = createGlobalStyle`
 ${reset};
 ${variables};
 
-html,body{
+html,body,#root{
     width: 100%;
+    min-height: 100vh;
+}
+footer {
+  position: sticky;
+  top: 100vh;
 }
 body{
     font-size: 17px;
@@ -22,6 +27,7 @@ h1,h2,h3,h4{
     font-family: 'Asap', sans-serif;
     font-weight: 700;
     margin-bottom: 15px;
+    line-height:1.3em;
 }
 
 h1{
@@ -43,6 +49,15 @@ p{
 }
 img{
     width: 100%;
+}
+
+@media (max-width: 660px){
+    h2{
+        font-size: 1.2em;
+    }
+    h4{
+    font-size:1.1em;
+}
 }
 `;
 

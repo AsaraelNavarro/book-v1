@@ -16,7 +16,7 @@ const StyledBurger = styled.div`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${({ open }) => open ? '#ccc' : '#333'};
+    background-color: ${({ open }) => open ? '#fb764c' : '#083949'};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
@@ -34,15 +34,15 @@ const StyledBurger = styled.div`
 `;
 
 export default function Burger() {
-    const [open, setOpen] = useState(false)
-    return (
-        <>
-            <StyledBurger open={open} onClick={() => setOpen(!open)}>
-                <div />
-                <div />
-                <div />
-            </StyledBurger>
-            <RightNav open={open} />
-        </>
-    )
+  const [open, setOpen] = useState(false)
+  return (
+    <>
+      <StyledBurger open={open} onClick={() => setOpen(!open)}>
+        <div />
+        <div />
+        <div />
+      </StyledBurger>
+      <RightNav open={open} />
+    </>
+  )
 }

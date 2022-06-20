@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 //Page and layout imports
 import SiteHeader from './components/SiteHeader';
+import Footer from './components/Footer';
 import Home from './pages/Home';
 import Cv from './pages/Cv';
 import Portfolio from './pages/Portfolio';
@@ -26,6 +27,7 @@ function App() {
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/posts/:id" element={<Post />} />
         </Routes>
+        <Footer />
       </>
     </ThemeProvider>
   );

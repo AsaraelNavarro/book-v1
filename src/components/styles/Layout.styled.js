@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const StyledMain = styled.main`
     width: 100%;
-    overflow: hidden;
 `;
 const ContainerFluid = styled.section`
     width:100%;
@@ -68,7 +67,7 @@ const ColumnHero = styled.div`
 `;
 const Grid = styled.div` 
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     position: relative;
     align-items: start;
@@ -83,20 +82,73 @@ const Grid = styled.div`
 `;
 
 const ProfileColumn = styled.div`
-    grid-column: 1;
     position: sticky;
-    top: 10px;
+    top: 100px;
+    grid-column: 1;
+    display: grid;
+    grid-gap: 20px;
+    align-self: start;
+
+    @media (max-width: 920px){
+        grid-column: span 2;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        
+        grid-auto-flow: dense;
+        
+        section{
+            &:nth-child(1){
+                grid-column: 1/2;
+                grid-row: 1/3;
+            }
+            &:nth-child(2){
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+            &:nth-child(3){
+                grid-column: 2/3;
+                grid-row: 2/3;
+            }
+        }
+
+    }
+
+    @media (max-width: 660px){
+        grid-column: 1;
+        display: grid;
+        grid-template-columns: 1fr;
+        section{
+            &:nth-child(1){
+                grid-column: 1;
+                grid-row: auto;
+            }
+            &:nth-child(2){
+                grid-column: 1;
+                grid-row: auto;
+            }
+            &:nth-child(3){
+                grid-column: 1;
+                grid-row: auto;
+            }
+        }
+    }
 `;
 
 const JobColumn = styled.div`
+    display: grid;
+    align-self: start;
+    grid-gap: 20px;
     grid-column: span 2;
+
+    @media (max-width: 660px){
+        grid-column: 1;
+    }
 `;
 
 const TileContainer = styled.section`
     background-color: ${({ theme }) => theme.colors.neutralLight};
 	padding: 40px 30px 30px;
 	border-radius: 5px;
-	margin-bottom: 20px;
 `;
 
 const Article = styled.article`

@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const StyledLink = styled(Link)`
+const StyledLink = styled(NavLink)`
     padding:30px 15px;
     color: ${({ theme }) => theme.colors.main};
     border-bottom: 3px solid transparent;
@@ -9,11 +9,12 @@ const StyledLink = styled(Link)`
 	text-decoration: none;
 	text-transform: uppercase;
 
-	&:hover {
+	&:hover,
+    &.active {
 		border-bottom: 3px solid ${({ theme }) => theme.colors.accent};
 		color: ${({ theme }) => theme.colors.accent};
 	}
-`
+`;
 
 const ButtonLink = styled(StyledLink)`
     text-align: center;
@@ -35,7 +36,7 @@ const ButtonLink = styled(StyledLink)`
         color: ${({ theme }) => theme.colors.main};
         border: none;
     }
-`
+`;
 const HeroLink = styled(ButtonLink)`
     background-color: ${({ theme }) => theme.colors.main};
     color: ${({ theme }) => theme.colors.light};
@@ -46,7 +47,7 @@ const HeroLink = styled(ButtonLink)`
         color: ${({ theme }) => theme.colors.main};
         border: none;
     }
-`
+`;
 
 const Button = styled.a`
     text-align: center;
@@ -68,7 +69,7 @@ const Button = styled.a`
         background-color: ${({ theme }) => theme.colors.light};
         color: ${({ theme }) => theme.colors.main};
     }
-`
+`;
 
 
 
@@ -94,16 +95,16 @@ const TextButton = styled(ButtonLink)`
             margin-left:10px;
         }
     }
-`
+`;
 const LightButton = styled(Button)`
     background-color: ${({ theme }) => theme.colors.light};
     color: ${({ theme }) => theme.colors.main};
-`
+`;
 
 const CenteredButton = styled(LightButton)`
     background-color: ${({ theme }) => theme.colors.secondary};
     margin: 40px auto 0;
-`
+`;
 
 const AccentButton = styled(Button)`
     background-color: ${({ theme }) => theme.colors.accent};
@@ -128,18 +129,21 @@ const Title = styled.h2`
         z-index: -1;
         width: 100%;
         height:10px;
-        bottom: 1px;
+        bottom: 5px;
         background-color: ${({ theme }) => theme.colors.light};
         opacity: .5;
     } 
 
     @media (max-width: 660px){
-        font-size:1.6em;
+        font-size:1.2em;
     }
 `;
 
 const TitleCv = styled(Title)`
     font-size: 1.4em;
+    @media (max-width: 660px){
+        font-size:1.2em;
+    }
 `;
 
 const WhiteTitle = styled(Title)`
@@ -163,16 +167,15 @@ const Figure = styled.figure`
         width: 100%;
         object-fit: cover;
         min-height: 333px;
-    }
-        
-`
+    }    
+`;
 
 const TrabajoFigure = styled(Figure)`
     background-color: ${({ theme }) => theme.colors.secondary};
-`
+`;
 const BlogFigure = styled(Figure)`
     background-color: ${({ theme }) => theme.colors.neutralLight};
-`
+`;
 
 
 export { Button, LightButton, TextButton, CenteredButton, AccentButton, Title, TitleCv, WhiteTitle, Figure, TrabajoFigure, BlogFigure, StyledLink, ButtonLink, HeroLink }

@@ -32,12 +32,13 @@ const Ul = styled.ul`
 `;
 
 export default function RightNav({ open }) {
+
     return (
         <Ul open={open}>
-            <li><StyledLink to="/">Inicio</StyledLink></li>
-            <li><StyledLink to="/portfolio">Proyectos</StyledLink></li>
-            <li><StyledLink to="/cv">CV</StyledLink></li>
-            <li><StyledLink to="/blog">Blog</StyledLink></li>
+            <li><StyledLink className="nav-link" to="/">Inicio</StyledLink></li>
+            <li><StyledLink className="nav-link" to="/portfolio">Proyectos</StyledLink></li>
+            <li><StyledLink className="nav-link" to="/cv">CV</StyledLink></li>
+            <li><StyledLink className="nav-link" to="/blog">Blog</StyledLink></li>
         </Ul>
     )
 }

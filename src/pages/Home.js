@@ -5,7 +5,6 @@ import About from '../components/About';
 import Portfolio from '../components/Portfolio';
 import Areas from '../components/Areas';
 import Blog from '../components/Blog';
-import Footer from '../components/Footer';
 
 function Home() {
 
@@ -16,7 +15,6 @@ function Home() {
             <Portfolio />
             <Areas />
             <Blog />
-            <Footer />
         </StyledMain>
     )
 }

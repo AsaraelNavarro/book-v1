@@ -2,7 +2,7 @@ import React from 'react';
 import { StyledMain } from '../components/styles/Layout.styled';
 import fetchGit from '../hooks/fetchGit';
 
-import { Title, Button, ButtonLink, Figure } from '../components/styles/Elements.styled';
+import { Title, Button, Figure } from '../components/styles/Elements.styled';
 import { Container, Grid, Article } from '../components/styles/Layout.styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
@@ -16,7 +16,7 @@ export default function Portfolio() {
         return new Date(b.pushed_at).valueOf() - new Date(a.pushed_at).valueOf()
     };
 
-    if (loading) return <StyledMain><Container>Loading...</Container></StyledMain>
+    if (loading) return <StyledMain><Container><Grid>Loading...</Grid></Container></StyledMain>
     if (error) return <StyledMain><Container><p>Error</p></Container ></StyledMain>
     return (
         <StyledMain>
@@ -43,7 +43,6 @@ export default function Portfolio() {
                         </Article>
                     ))}
                 </Grid>
-                <ButtonLink to="/portfolio">Todos los proyectos</ButtonLink>
             </Container>
         </StyledMain>
     )
