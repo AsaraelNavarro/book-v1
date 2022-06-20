@@ -39,9 +39,16 @@ const Card = styled.article`
 `;
 
 export default function JobList() {
+	const qs = require('qs');
+	const query = qs.stringify({
+		sort: ['id:desc'],
+	}, {
+		encodeValuesOnly: true,
+	});
+
 	const contentType = 'jobs'
 	/* const apiUrl = 'http://localhost:1337/api/jobs/' */
-	const apiUrl = `https://strapi-mycv.herokuapp.com/api/${contentType}`;
+	const apiUrl = `https://strapi-mycv.herokuapp.com/api/${contentType}?${query}`;
 	const { loading, error, data } = useFetch(apiUrl)
 
 	/* console.log(data); */
