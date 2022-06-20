@@ -14,7 +14,7 @@ body{
     font-size: 17px;
     font-family: 'Mulish', sans-serif;
     color: ${({ theme }) => theme.colors.main};
-    background-image: repeating-linear-gradient(to right, rgba(8,57,73, .1), rgba(8,57,73, .1) 1px, transparent 1px, transparent);
+    background-image: repeating-linear-gradient(to right, rgba(8,57,73, .05), rgba(8,57,73, .1) 1px, transparent 1px, transparent);
     background-size: 100px 100px;
 }
 

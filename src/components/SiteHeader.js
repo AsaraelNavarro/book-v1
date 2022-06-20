@@ -1,8 +1,9 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import logo from '../images/logo.svg'
-import { Link } from 'react-router-dom'
 import { StyledHeader, StyledNav } from './styles/Header.styled';
+import Burger from './Burger';
+/* import { StyledLink } from './styles/Elements.styled'; */
 
 
 export default function SiteHeader() {
@@ -10,13 +11,7 @@ export default function SiteHeader() {
         <StyledHeader>
             <StyledNav>
                 <Link to="/"><img src={logo} alt="logo" /></Link>
-
-                <ul>
-                    <Link to="/">Inicio</Link>
-                    <Link to="/cv">CV</Link>
-                    {/* <Link to="/detalles/:id" className="nav-link">Detalles</Link>
-                    <Link to="/categoria/:id" className="nav-link">Categoria</Link> */}
-                </ul>
+                <Burger />
             </StyledNav>
         </StyledHeader>
     )

@@ -1,13 +1,63 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
+const StyledLink = styled(Link)`
+    padding:30px 15px;
+    color: ${({ theme }) => theme.colors.main};
+    border-bottom: 3px solid transparent;
+    transition: all 500ms ease;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&:hover {
+		border-bottom: 3px solid ${({ theme }) => theme.colors.accent};
+		color: ${({ theme }) => theme.colors.accent};
+	}
+`
+
+const ButtonLink = styled(StyledLink)`
+    text-align: center;
+    padding: 1em 2em;
+    margin: 30px auto 0;
+    background-color: ${({ theme }) => theme.colors.light};
+    color: ${({ theme }) => theme.colors.main};
+    font-size: .9em;
+    letter-spacing:1px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: .4em;
+    border: none;
+    transition: background-color 500ms ease, color 500ms ease;
+
+    &:hover{
+        background-color: ${({ theme }) => theme.colors.accent};
+        color: ${({ theme }) => theme.colors.main};
+        border: none;
+    }
+`
+const HeroLink = styled(ButtonLink)`
+    background-color: ${({ theme }) => theme.colors.main};
+    color: ${({ theme }) => theme.colors.light};
+    margin: 0 auto 0 0;
+    
+    &:hover{
+        background-color: ${({ theme }) => theme.colors.light};
+        color: ${({ theme }) => theme.colors.main};
+        border: none;
+    }
+`
 
 const Button = styled.a`
-    max-width:230px;
     text-align: center;
-    padding: .7em 2em;
+    padding: 1em 2em;
     margin: 0 10px 10px 0;
     background-color: ${({ theme }) => theme.colors.main};
     color: ${({ theme }) => theme.colors.light};
-    font-size: 1em;
+    font-size: .9em;
+    letter-spacing:1px;
+    max-width: 220px;
+    font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
     border-radius: .4em;
@@ -18,20 +68,52 @@ const Button = styled.a`
         background-color: ${({ theme }) => theme.colors.light};
         color: ${({ theme }) => theme.colors.main};
     }
+`
 
-    &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
+
+
+const TextButton = styled(ButtonLink)`
+    padding: 1em 2em 1em 0;
+    background-color: transparent;
+    color: ${({ theme }) => theme.colors.main};
+    text-transform: initial;
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
+
+    svg{
+        margin-left:5px;
+        transition: margin-left 500ms ease;
+    }
+
+    &:hover{
+        background-color: transparent;
+        color: ${({ theme }) => theme.colors.accent};
+
+        svg{
+            margin-left:10px;
+        }
     }
 `
 const LightButton = styled(Button)`
     background-color: ${({ theme }) => theme.colors.light};
     color: ${({ theme }) => theme.colors.main};
 `
+
+const CenteredButton = styled(LightButton)`
+    background-color: ${({ theme }) => theme.colors.secondary};
+    margin: 40px auto 0;
+`
+
+const AccentButton = styled(Button)`
+    background-color: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.main};
+
+    &:hover{
+        background-color: ${({ theme }) => theme.colors.light};
+        color: ${({ theme }) => theme.colors.main};
+    }
+`;
 
 const Title = styled.h2`
     color:  ${({ theme }) => theme.colors.main};
@@ -50,14 +132,25 @@ const Title = styled.h2`
         background-color: ${({ theme }) => theme.colors.light};
         opacity: .5;
     } 
-	
-`
+
+    @media (max-width: 660px){
+        font-size:1.6em;
+    }
+`;
+
+const TitleCv = styled(Title)`
+    font-size: 1.4em;
+`;
+
 const WhiteTitle = styled(Title)`
     color:  ${({ theme }) => theme.colors.white};
+    @media (max-width: 660px){
+        font-size:1.6em;
+    }
 `;
 
 const Figure = styled.figure`
-    padding:20px;
+    padding:10px;
     border-radius: 20px;
     margin-top: 80px;
     background-color: ${({ theme }) => theme.colors.accent};
@@ -68,104 +161,18 @@ const Figure = styled.figure`
         margin-top: -80px;
         box-shadow: 0 0 30px rgba(8,57,73, .3);
         width: 100%;
+        object-fit: cover;
+        min-height: 333px;
     }
         
 `
-const Loader = styled.div`
-/**
-  * Building blocks
-  *
-  * @author jh3y - jheytompkins.com
-*/
-@-webkit-keyframes building-blocks {
-0%,
-20% {
-    opacity: 0;
-    -webkit-transform: translateY(-300%);
-            transform: translateY(-300%); }
-30%,
-70% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
-90%,
-100% {
-    opacity: 0;
-    -webkit-transform: translateY(300%);
-            transform: translateY(300%); } }
-@keyframes building-blocks {
-0%,
-20% {
-    opacity: 0;
-    -webkit-transform: translateY(-300%);
-            transform: translateY(-300%); }
-30%,
-70% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0); }
-90%,
-100% {
-    opacity: 0;
-    -webkit-transform: translateY(300%);
-            transform: translateY(300%); } }
 
-.building-blocks {
-position: relative; }
-.building-blocks div {
-    height: 20px;
-    position: absolute;
-    width: 20px; }
-    .building-blocks div:after {
-    -webkit-animation: building-blocks 2.1s ease infinite backwards;
-            animation: building-blocks 2.1s ease infinite backwards;
-    background: ${({ theme }) => theme.colors.accent};
-    content: '';
-    display: block;
-    height: 20px;
-    width: 20px; }
-    .building-blocks div:nth-child(1) {
-    -webkit-transform: translate(-50%, -50%) translate(60%, 120%);
-            transform: translate(-50%, -50%) translate(60%, 120%); }
-    .building-blocks div:nth-child(2) {
-    -webkit-transform: translate(-50%, -50%) translate(-60%, 120%);
-            transform: translate(-50%, -50%) translate(-60%, 120%); }
-    .building-blocks div:nth-child(3) {
-    -webkit-transform: translate(-50%, -50%) translate(120%, 0);
-            transform: translate(-50%, -50%) translate(120%, 0); }
-    .building-blocks div:nth-child(4) {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
-    .building-blocks div:nth-child(5) {
-    -webkit-transform: translate(-50%, -50%) translate(-120%, 0);
-            transform: translate(-50%, -50%) translate(-120%, 0); }
-    .building-blocks div:nth-child(6) {
-    -webkit-transform: translate(-50%, -50%) translate(60%, -120%);
-            transform: translate(-50%, -50%) translate(60%, -120%); }
-    .building-blocks div:nth-child(7) {
-    -webkit-transform: translate(-50%, -50%) translate(-60%, -120%);
-            transform: translate(-50%, -50%) translate(-60%, -120%); }
-.building-blocks div:nth-child(1):after {
-    -webkit-animation-delay: 0.15s;
-            animation-delay: 0.15s; }
-.building-blocks div:nth-child(2):after {
-    -webkit-animation-delay: 0.3s;
-            animation-delay: 0.3s; }
-.building-blocks div:nth-child(3):after {
-    -webkit-animation-delay: 0.45s;
-            animation-delay: 0.45s; }
-.building-blocks div:nth-child(4):after {
-    -webkit-animation-delay: 0.6s;
-            animation-delay: 0.6s; }
-.building-blocks div:nth-child(5):after {
-    -webkit-animation-delay: 0.75s;
-            animation-delay: 0.75s; }
-.building-blocks div:nth-child(6):after {
-    -webkit-animation-delay: 0.9s;
-            animation-delay: 0.9s; }
-.building-blocks div:nth-child(7):after {
-    -webkit-animation-delay: 1.05s;
-            animation-delay: 1.05s; }
+const TrabajoFigure = styled(Figure)`
+    background-color: ${({ theme }) => theme.colors.secondary};
+`
+const BlogFigure = styled(Figure)`
+    background-color: ${({ theme }) => theme.colors.neutralLight};
 `
 
-export { Button, LightButton, Title, WhiteTitle, Figure, Loader }
+
+export { Button, LightButton, TextButton, CenteredButton, AccentButton, Title, TitleCv, WhiteTitle, Figure, TrabajoFigure, BlogFigure, StyledLink, ButtonLink, HeroLink }

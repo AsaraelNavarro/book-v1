@@ -3,9 +3,12 @@ import { ThemeProvider } from 'styled-components';
 import { Routes, Route } from "react-router-dom";
 
 //Page and layout imports
+import SiteHeader from './components/SiteHeader';
 import Home from './pages/Home';
 import Cv from './pages/Cv';
-import SiteHeader from './components/SiteHeader';
+import Portfolio from './pages/Portfolio';
+import BlogPage from './pages/BlogPage';
+import Post from './pages/Post';
 import theme from './styles/Theme';
 import GlobalStyles from './styles/GlobalStyle';
 
@@ -19,6 +22,9 @@ function App() {
           <Route path="/" element={<App />} />
           <Route index element={<Home />} />
           <Route path="/cv" element={<Cv />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/posts/:id" element={<Post />} />
         </Routes>
       </>
     </ThemeProvider>

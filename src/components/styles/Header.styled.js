@@ -6,6 +6,9 @@ const StyledHeader = styled.header`
 	background-color: ${({ theme }) => theme.colors.white};
 	border-bottom: 1px solid ${({ theme }) => theme.colors.neutral};
 	width: 100%;
+	position: sticky;
+	top: 0;
+	z-index: 10;
 `;
 
 const StyledNav = styled.nav`
@@ -19,25 +22,6 @@ const StyledNav = styled.nav`
 
 	img {
 		height: 40px;
-	}
-	ul {
-		width: 30%;
-		display: flex;
-		justify-content: flex-end;
-
-		a {
-            padding:30px 15px;
-            color: ${({ theme }) => theme.colors.main};
-            border-bottom: 3px solid transparent;
-            transition: all 500ms ease;
-			text-decoration: none;
-			text-transform: uppercase;
-
-			&:hover {
-				border-bottom: 3px solid ${({ theme }) => theme.colors.accent};
-				color: ${({ theme }) => theme.colors.accent};
-			}
-		}
 	}
 `;
 

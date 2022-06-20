@@ -2,11 +2,6 @@ import { useEffect, useState } from "react";
 import { Octokit } from "@octokit/rest";
 const octokit = new Octokit({ auth: `${process.env.REACT_APP_GH_TOKEN}` });
 
-export const headers = {
-    "Accept": "application/vnd.github.v3+json",
-    "Authorization": `Token ${process.env.REACT_APP_GH_TOKEN}`
-}
-
 const useFetch = () => {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
@@ -17,18 +12,9 @@ const useFetch = () => {
             setLoading(true)
             try {
                 const { data } = await octokit.rest.repos.listForAuthenticatedUser({
-                    "per_page": 4,
-                    "sort": "updated"
+                    "sort": "updated_url"
                 })
                 /* console.log(data); */
-
-                /* const { content } = await data.map((image) => {
-                    return fetch(image.contents_url.replace('{+path}', 'public'), {
-                        "method": "GET",
-                        "headers": headers
-                    })
-                })
-                console.log({ content }) */
 
                 setData(data)
                 setLoading(false)
