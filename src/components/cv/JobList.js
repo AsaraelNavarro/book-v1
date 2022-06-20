@@ -39,28 +39,28 @@ const Card = styled.article`
 `;
 
 export default function JobList() {
-    const contentType = 'jobs'
-    /* const apiUrl = 'http://localhost:1337/api/jobs/' */
-    const apiUrl = `http://localhost:1337/api/${contentType}`;
-    const { loading, error, data } = useFetch(apiUrl)
+	const contentType = 'jobs'
+	/* const apiUrl = 'http://localhost:1337/api/jobs/' */
+	const apiUrl = `https://strapi-mycv.herokuapp.com/api/${contentType}`;
+	const { loading, error, data } = useFetch(apiUrl)
 
-    /* console.log(data); */
+	/* console.log(data); */
 
-    if (loading) return <p>Loading...</p>
-    if (error) return <p>Error</p>
-    return (
-        <TileContainer>
-            <TitleCv>Experiencia profesional</TitleCv>
-            {data.data.map((jobs) => (
-                <Card key={jobs.id}>
-                    <div>
-                        <h4>{jobs.attributes.position} en {jobs.attributes.company} </h4>
-                        <small>{jobs.attributes.start_date} - </small>
-                        <small>{jobs.attributes.exit_date}</small>
-                    </div>
-                    <p>{jobs.attributes.activities}</p>
-                </Card>
-            ))}
-        </TileContainer>
-    )
+	if (loading) return <p>Loading...</p>
+	if (error) return <p>Error</p>
+	return (
+		<TileContainer>
+			<TitleCv>Experiencia profesional</TitleCv>
+			{data.data.map((jobs) => (
+				<Card key={jobs.id}>
+					<div>
+						<h4>{jobs.attributes.position} en {jobs.attributes.company} </h4>
+						<small>{jobs.attributes.start_date} - </small>
+						<small>{jobs.attributes.exit_date}</small>
+					</div>
+					<p>{jobs.attributes.activities}</p>
+				</Card>
+			))}
+		</TileContainer>
+	)
 }

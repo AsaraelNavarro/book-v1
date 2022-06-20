@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
 
 export default function Blog() {
-    const baseUrl = `http://localhost:1337`
+    const baseUrl = `https://strapi-mycv.herokuapp.com`
     const contentType = 'posts'
     const apiUrl = `${baseUrl}/api/${contentType}?populate=*`;
     const { loading, error, data } = useFetch(apiUrl);
@@ -28,7 +28,7 @@ export default function Blog() {
                 {data.data.slice(0, 3).map((posts) => (
                     <BlogArticle key={posts.id}>
                         <BlogFigure>
-                            <img src={`${baseUrl}${posts.attributes.featured_image.data.attributes.url}`} alt="Avatar Asarael Navarro Beltrán" />
+                            <img src={`${posts.attributes.featured_image.data.attributes.url}`} alt="Avatar Asarael Navarro Beltrán" />
                         </BlogFigure>
                         <div>
                             <h4>{posts.attributes.title}</h4>
