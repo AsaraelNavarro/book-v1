@@ -167,6 +167,7 @@ const Article = styled.article`
                 /* Required for text-overflow to do anything */
                 white-space: nowrap;
                 overflow: hidden;
+                height: 1.3em;
             }
             ul{
                 margin-bottom: 40px;

@@ -28,13 +28,13 @@ export default function Portfolio() {
                 {data.sort(byDate).slice(0, 4).map((repos) => (
                     <Article key={repos.id}>
                         <Figure>
-                            <img src={`/covers/${repos.name}.jpg`} alt="Avatar Asarael Navarro Beltrán" />
+                            <img src={`/covers/${repos.name.toLowerCase()}.jpg`} alt="Avatar Asarael Navarro Beltrán" />
                         </Figure>
                         <div>
                             <h3>{repos.name}</h3>
                             <p>{repos.description}</p>
                             <ul>
-                                <li >{repos.language}</li>
+                                <li>{repos.language}</li>
                                 <li><FontAwesomeIcon icon={solid('star')} />  {repos.stargazers_count}</li>
                                 <li><FontAwesomeIcon icon={solid('code-fork')} />  {repos.forks}</li>
                             </ul>
