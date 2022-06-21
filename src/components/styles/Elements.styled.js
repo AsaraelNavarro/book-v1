@@ -167,6 +167,11 @@ const Figure = styled.figure`
         width: 100%;
         object-fit: cover;
         min-height: 333px;
+        transition: all 500ms ease;
+
+        &:hover{
+            transform: translateY(-10px)
+        }
     }    
 `;
 

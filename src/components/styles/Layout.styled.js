@@ -162,6 +162,17 @@ const Article = styled.article`
         display: grid;
         grid-template-rows: 50px 1fr 1fr;
         padding: 0 20px;
+
+            a:first-child{
+                text-decoration: none;
+                color:${({ theme }) => theme.colors.main};
+                transition: color 500ms ease;
+
+                &:hover{
+                    color:${({ theme }) => theme.colors.secondary};
+                }
+            }
+
             h3{
                 text-overflow: ellipsis;
                 /* Required for text-overflow to do anything */
@@ -171,7 +182,7 @@ const Article = styled.article`
             }
             ul{
                 margin-bottom: 40px;
-                
+
             li{
                 display: inline-block;
                 padding: 5px;
@@ -188,7 +199,7 @@ const Article = styled.article`
         align-items: center;
     }
 
-    @media(max-width: 920px) {        
+    @media(max-width: 920px) {
         &:first-child{
             grid-column: span 1;
             grid-template-columns: 1fr;
@@ -215,11 +226,18 @@ const ArticleLeftColumn = styled.article`
 
     div{
         order:1;
+        a:first-child{
+                text-decoration: none;
+                color:${({ theme }) => theme.colors.white};
+                transition: color 500ms ease;
+
+                &:hover{
+                    color:${({ theme }) => theme.colors.secondary};
+                }
+            }
     }
 
-    h3{
-        color: ${({ theme }) => theme.colors.white};
-    }
+    
     p{
         margin-bottom: 80px;
     }
@@ -261,11 +279,27 @@ const BlogArticle = styled.article`
     div{
         padding: 0 20px;
         
-        h4{
-            color: ${({ theme }) => theme.colors.secondary};
+        a:first-child{
+            text-decoration: none;
+            color: ${({ theme }) => theme.colors.main};
+            transition: color 500ms ease;
+
+            &:hover {
+                color: ${({ theme }) => theme.colors.secondary};
+            }
+
         }
-        
+
     }
+
+    /* a:after{
+        content:'';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+    } */
 `;
 
 const StyledFooter = styled.footer`

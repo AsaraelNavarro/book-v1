@@ -28,10 +28,14 @@ export default function Blog() {
                 {data.data.slice(0, 3).map((posts) => (
                     <BlogArticle key={posts.id}>
                         <BlogFigure>
-                            <img src={`${posts.attributes.featured_image.data.attributes.url}`} alt="Avatar Asarael Navarro Beltrán" />
+                            <a href={`/posts/${posts.id}`}>
+                                <img src={`${posts.attributes.featured_image.data.attributes.url}`} alt="Avatar Asarael Navarro Beltrán" />
+                            </a>
                         </BlogFigure>
                         <div>
-                            <h4>{posts.attributes.title}</h4>
+                            <a href={`/posts/${posts.id}`}>
+                                <h4>{posts.attributes.title}</h4>
+                            </a>
                             <p>{posts.attributes.content.substring(0, 118)}..</p>
                             <TextButton to={`/posts/${posts.id}`}>
                                 Leer más <FontAwesomeIcon icon={solid('arrow-right-long')} />

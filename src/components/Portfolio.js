@@ -2,8 +2,8 @@ import React from 'react';
 import fetchGit from '../hooks/fetchGit';
 
 /* import fetchGit from "./../hooks/fetchGit"; */
-import { Title, Button, ButtonLink, Figure } from './styles/Elements.styled';
 import { Container, Grid, Article } from './styles/Layout.styled';
+import { Title, Button, ButtonLink, Figure } from './styles/Elements.styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid, brands } from '@fortawesome/fontawesome-svg-core/import.macro';
 
@@ -28,10 +28,14 @@ export default function Portfolio() {
                 {data.sort(byDate).slice(0, 4).map((repos) => (
                     <Article key={repos.id}>
                         <Figure>
-                            <img src={`/covers/${repos.name.toLowerCase()}.jpg`} alt="Avatar Asarael Navarro Beltrán" />
+                            <a href={repos.html_url} target="_blank" rel="noopener noreferrer">
+                                <img src={`/covers/${repos.name.toLowerCase()}.jpg`} alt="Avatar Asarael Navarro Beltrán" />
+                            </a>
                         </Figure>
                         <div>
-                            <h3>{repos.name}</h3>
+                            <a href={repos.html_url} target="_blank" rel="noopener noreferrer">
+                                <h3>{repos.name}</h3>
+                            </a>
                             <p>{repos.description}</p>
                             <ul>
                                 <li>{repos.language}</li>
