@@ -1,6 +1,6 @@
-import useFetch from "../../hooks/useFetch"
+import useFetch from "../../hooks/useFetch";
 
-import { TitleCv } from "../../components/styles/Elements.styled"
+import { TitleCv } from "../../components/styles/Elements.styled";
 import { TileContainer } from '../../components/styles/Layout.styled';
 
 import styled from "styled-components";
