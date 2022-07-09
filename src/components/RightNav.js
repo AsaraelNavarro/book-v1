@@ -35,10 +35,10 @@ export default function RightNav({ open }) {
 
     return (
         <Ul open={open}>
-            <li><StyledLink className="nav-link" to="/">Inicio</StyledLink></li>
-            <li><StyledLink className="nav-link" to="/portfolio">Proyectos</StyledLink></li>
-            <li><StyledLink className="nav-link" to="/cv">CV</StyledLink></li>
-            <li><StyledLink className="nav-link" to="/blog">Blog</StyledLink></li>
+            <li open={open}><StyledLink className="nav-link" to="/">Inicio</StyledLink></li>
+            <li open={open}><StyledLink className="nav-link" to="/portfolio">Proyectos</StyledLink></li>
+            <li open={open}><StyledLink className="nav-link" to="/cv">CV</StyledLink></li>
+            <li open={open}><StyledLink className="nav-link" to="/blog">Blog</StyledLink></li>
         </Ul>
     )
 }
