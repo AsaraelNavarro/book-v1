@@ -31,14 +31,14 @@ const Ul = styled.ul`
 }
 `;
 
-export default function RightNav({ open }) {
+export default function RightNav({ open, setOpen }) {
 
     return (
         <Ul open={open}>
-            <li open={open}><StyledLink className="nav-link" to="/">Inicio</StyledLink></li>
-            <li open={open}><StyledLink className="nav-link" to="/portfolio">Proyectos</StyledLink></li>
-            <li open={open}><StyledLink className="nav-link" to="/cv">CV</StyledLink></li>
-            <li open={open}><StyledLink className="nav-link" to="/blog">Blog</StyledLink></li>
+            <li><StyledLink onClick={() => setOpen(!open)} className="nav-link" to="/">Inicio</StyledLink></li>
+            <li><StyledLink onClick={() => setOpen(!open)} className="nav-link" to="/portfolio">Proyectos</StyledLink></li>
+            <li><StyledLink onClick={() => setOpen(!open)} className="nav-link" to="/cv">CV</StyledLink></li>
+            <li><StyledLink onClick={() => setOpen(!open)} className="nav-link" to="/blog">Blog</StyledLink></li>
         </Ul>
     )
 }

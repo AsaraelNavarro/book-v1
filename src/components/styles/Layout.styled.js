@@ -90,6 +90,8 @@ const ProfileColumn = styled.div`
     align-self: start;
 
     @media (max-width: 920px){
+        position: relative;
+        top: 0;
         grid-column: span 2;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto;

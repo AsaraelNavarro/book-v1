@@ -29,7 +29,7 @@ export default function Portfolio() {
                     <Article key={repos.id}>
                         <Figure>
                             <a href={repos.html_url} target="_blank" rel="noopener noreferrer">
-                                <img src={`/covers/${repos.name.toLowerCase()}.jpg`} alt="Avatar Asarael Navarro Beltrán" />
+                                <img src={`/covers/${repos.name.toLowerCase()}.jpg`} alt="Project cover" />
                             </a>
                         </Figure>
                         <div>
