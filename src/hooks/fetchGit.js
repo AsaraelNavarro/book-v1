@@ -11,7 +11,8 @@ const useFetch = () => {
         const fetchData = async () => {
             setLoading(true)
             try {
-                const { data } = await octokit.rest.repos.listForAuthenticatedUser({
+                const { data } = await octokit.rest.repos.listForUser({
+                    "username": "AsaraelNavarro",
                     "sort": "updated_url"
                 })
                 /* console.log(data); */
