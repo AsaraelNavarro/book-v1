@@ -5,7 +5,6 @@ const Card = styled.article`
 	padding: 30px 20px;
 	margin-bottom: 10px;
 	transition: all ease-out 0.2s;
-
 	&:hover {
 		background: ${({ theme }) => theme.colors.light};
 		box-shadow: 0 5px 18px rgba(8,57,73, 0.2);

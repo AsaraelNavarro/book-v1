@@ -35,7 +35,6 @@ const Card = styled.article`
 
 const JobCard = (props) => {
 	return (
-
 		<Card>
 			<div>
 				<h4>{props.puesto} en {props.empresa} </h4>
